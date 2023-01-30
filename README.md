@@ -2,8 +2,10 @@
 
 > 早先一直靠老版本的Word文档苟延残喘，然后公司内网平台有了以后用公司的，怎奈太久没更新了好多不适用，加之人懒，VPN都不想登，便开设此项目。
 >
-> 该项目持续更新~
+> 该项目持续更新
 
+
+[TOC]
 ## SQL注入
 
 修改Web应用服务的软件部分，增加对客户端提交数据的合法性验证，至少严格过滤SQL语句中的关键字，并且所有验证都应该在服务器端实现，以防客户端（IE页面代码部分）控制被绕过。
@@ -335,9 +337,9 @@ security.user.password=admin
 ## Memcahce 未授权访问
 
 1. 配置 memcached 监听本地回环地址 127.0.0.1。
-  vim /etc/sysconfig/memcached
-  OPTIONS="-l 127.0.0.1"  # 设置本地为监听
-  /etc/init.d/memcached restart   # 重启服务
+    vim /etc/sysconfig/memcached
+    OPTIONS="-l 127.0.0.1"  # 设置本地为监听
+    /etc/init.d/memcached restart   # 重启服务
 
 2. 当 memcached 配置为监听内网 IP 或公网 IP 时， 使用主机防火墙(iptalbes、 firewalld 等)和 网络防火墙对 memcached 服务端口 进行过滤。
 
